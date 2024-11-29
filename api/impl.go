@@ -9,6 +9,11 @@ import (
 
 type Server struct{}
 
+// GetPetById implements ServerInterface.
+func (s Server) GetPetById(w http.ResponseWriter, r *http.Request, petId int) {
+	panic("unimplemented")
+}
+
 func NewServer() Server {
 	return Server{}
 }
