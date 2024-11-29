@@ -5,3 +5,6 @@ generate:
   models: true
   embedded-spec: true
 output: api/api.gen.go
+import-mapping:
+  # for a given file/URL that is $ref'd, point `oapi-codegen` to the Go package that this spec is generated into, to perform Go package imports
+  ../common/common.yaml: github.com/charlestsai-gmi/oapi-demo/common

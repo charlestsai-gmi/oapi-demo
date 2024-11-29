@@ -1,0 +1,11 @@
+# yaml-language-server: ...
+package: common
+generate:
+  chi-server: true
+  models: true
+  embedded-spec: true
+output-options:
+  # to make sure that all types are generated
+  skip-prune: true
+output: common/common.gen.go
+

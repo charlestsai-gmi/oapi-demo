@@ -34,10 +34,10 @@ paths:
           content:
             application/xml:
               schema:
-                $ref: '#/components/schemas/Pet'
+                $ref: '../common/common.yaml#/components/schemas/Pet'
             application/json:
               schema:
-                $ref: '#/components/schemas/Pet'
+                $ref: '../common/common.yaml#/components/schemas/Pet'
         '400':
           description: Invalid ID supplied
         '404':
@@ -53,25 +53,3 @@ components:
         ping:
           type: string
           example: pong
-    Pet:
-      title: a Pet
-      description: A pet for sale in the pet store
-      type: object
-      required:
-        - name
-        - photoUrls
-      properties:
-        id:
-          type: integer
-          format: uuid
-          x-go-type-skip-optional-pointer: true
-        name:
-          type: string
-          example: doggie
-        photoUrls:
-          type: array
-          xml:
-            name: photoUrl
-            wrapped: true
-          items:
-            type: string
