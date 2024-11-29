@@ -64,6 +64,7 @@ components:
         id:
           type: integer
           format: uuid
+          x-go-type-skip-optional-pointer: true
         name:
           type: string
           example: doggie
